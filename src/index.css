@@ -1,0 +1,103 @@
+@import "react-toastify/dist/ReactToastify.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 dark:bg-gray-800/20 backdrop-blur-md border border-white/20 dark:border-gray-700/30;
+  }
+  
+  .card-elevation {
+    @apply shadow-lg shadow-gray-900/5 dark:shadow-gray-900/20;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gradient-to-r from-secondary-600 to-secondary-700 hover:from-secondary-700 hover:to-secondary-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-200;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-gray-900 dark:text-gray-100;
+  }
+  
+  .dropdown-menu {
+    @apply absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 py-2 z-50 animate-slide-down;
+  }
+  
+  .dropdown-item {
+    @apply block w-full px-4 py-3 text-left text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150;
+  }
+  
+  .role-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+  }
+  
+  .role-free {
+    @apply bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300;
+  }
+  
+  .role-member {
+    @apply bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300;
+  }
+  
+  .role-master {
+    @apply bg-secondary-100 dark:bg-secondary-900/30 text-secondary-700 dark:text-secondary-300;
+  }
+  
+  .role-both {
+    @apply bg-gradient-to-r from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 text-purple-700 dark:text-purple-300;
+  }
+}
+
+/* Toast Overrides */
+.Toastify__toast-container {
+  @apply top-4 right-4;
+  width: 380px;
+}
+
+.Toastify__toast {
+  @apply bg-white dark:bg-gray-800 shadow-xl rounded-lg p-4 text-gray-900 dark:text-gray-100;
+}
+
+.Toastify__toast--success {
+  @apply border-l-4 border-green-500;
+}
+
+.Toastify__toast--error {
+  @apply border-l-4 border-red-500;
+}
+
+.Toastify__toast--info {
+  @apply border-l-4 border-blue-500;
+}
+
+.Toastify__toast--warning {
+  @apply border-l-4 border-yellow-500;
+}
+
+.Toastify__progress-bar {
+  @apply bg-gradient-to-r from-primary-500 to-accent-500;
+}
