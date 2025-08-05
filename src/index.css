@@ -5,9 +5,8 @@
 
 @layer base {
   * {
-    @apply border-border;
+    /* Universal styles can be added here */
   }
-  
   body {
     @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
